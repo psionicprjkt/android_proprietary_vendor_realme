@@ -1,6 +1,5 @@
 /**
- * Copyright (C) 2020 The LineageOS Project
- * Copyright (C) 2020 Android Open Source Project
+ * Copyright (C) 2020 The Evolution X Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,6 +30,17 @@ android_app_import {
 }
 
 android_app_import {
+	name: "ImsService",
+	owner: "realme",
+	apk: "proprietary/priv-app/ImsService/ImsService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
 	name: "TeeService",
 	owner: "realme",
 	apk: "proprietary/priv-app/TeeService/TeeService.apk",
@@ -51,5 +61,47 @@ android_app_import {
 	},
 	privileged: true,
 	product_specific: true,
+}
+
+dex_import {
+	name: "mediatek-common",
+	owner: "realme",
+	jars: ["proprietary/framework/mediatek-common.jar"],
+}
+
+dex_import {
+	name: "mediatek-framework",
+	owner: "realme",
+	jars: ["proprietary/framework/mediatek-framework.jar"],
+}
+
+dex_import {
+	name: "mediatek-ims-base",
+	owner: "realme",
+	jars: ["proprietary/framework/mediatek-ims-base.jar"],
+}
+
+dex_import {
+	name: "mediatek-ims-common",
+	owner: "realme",
+	jars: ["proprietary/framework/mediatek-ims-common.jar"],
+}
+
+dex_import {
+	name: "mediatek-telecom-common",
+	owner: "realme",
+	jars: ["proprietary/framework/mediatek-telecom-common.jar"],
+}
+
+dex_import {
+	name: "mediatek-telephony-base",
+	owner: "realme",
+	jars: ["proprietary/framework/mediatek-telephony-base.jar"],
+}
+
+dex_import {
+	name: "mediatek-telephony-common",
+	owner: "realme",
+	jars: ["proprietary/framework/mediatek-telephony-common.jar"],
 }
 
