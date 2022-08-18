@@ -5,6 +5,10 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/realme/RMX2001
 
+# 64MP Enabler
+PRODUCT_COPY_FILES += \
+    vendor/realme/RMX2001/proprietary/product/vendor_overlay/29/lib64/libmtkcam_metastore.so:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/lib64/libmtkcam_metastore.so
+
 # Bufferfix
 PRODUCT_COPY_FILES += \
     vendor/realme/RMX2001/proprietary/product/vendor_overlay/29/lib64/libmtkcam_3rdparty.customer.so:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/lib64/libmtkcam_3rdparty.customer.so
